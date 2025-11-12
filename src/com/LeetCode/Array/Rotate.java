@@ -1,4 +1,4 @@
-package com.LeetCode;
+package com.LeetCode.Array;
 
 public class Rotate {
         public void rotate(int[][] matrix) {

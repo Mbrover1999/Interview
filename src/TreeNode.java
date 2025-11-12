@@ -1,12 +1,15 @@
 public class TreeNode {
    public int value;
-   public int id;
 
    public TreeNode leftChild;
    public TreeNode rightChild;
 
+   public TreeNode (int value){
+      this.value = value;
+   }
+
    public void displayNode(){
-       System.out.println("{" + id +", " + value + "}");
+       System.out.println("{" + value + "}");
 
    }
 

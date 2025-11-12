@@ -1,4 +1,4 @@
-package com.LeetCode;
+package com.LeetCode.Array;
 
 public class SingleNumber {
     public static void main(String[] args) {

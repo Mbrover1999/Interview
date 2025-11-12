@@ -1,4 +1,4 @@
-package com.LeetCode;
+package com.LeetCode.Strings;
 
 public class LongestCommonPrefix {
     public static void main(String[] args) {
@@ -14,6 +14,7 @@ public class LongestCommonPrefix {
             while (strs[i].indexOf(prefix) != 0) {
                 System.out.println(strs[i].indexOf(prefix));
                 prefix = prefix.substring(0, prefix.length() - 1);
+                System.out.println(strs[i].indexOf(prefix));
                 if (prefix.isEmpty()) return "";
             }
         return prefix;
