@@ -2,8 +2,8 @@ package com.crackingTheInterview.arrays;
 
 public class IsUnique {
     public static void main(String[] args) {
-        System.out.println(isUnique("abcde"));
-        System.out.println(isUnique("abccde"));
+        System.out.println(isUnique2("abcde"));
+        System.out.println(isUnique2("abccde"));
     }
 
     public static boolean isUnique(String str) { // without using additional data structures
@@ -20,7 +20,22 @@ public class IsUnique {
         }
         return true;
     }
+    public static boolean isUnique2(String str) { // without using additional data structures
+        int checker = 0;
+        int value = -1;
+       for(int i = 0; i < str.length(); i++){
+           value = str.charAt(i) - 'a';
+           if((checker & (1 << value)) > 0){
+               return false;
+           }
+
+           checker |= (1 << value);
+       }
+       return true;
+    }
+
 }
+
 //    public static boolean isUnique(String str){
 //        boolean[] char_set = new boolean[128]; // assuming ASCII
 //        for(int i = 0; i < str.length(); i++){
